@@ -1,0 +1,367 @@
+/* =============================================
+   Eventify - Main Stylesheet
+   SEN4001 Web Design & Databases
+   ============================================= */
+
+/* --- Reset & Base --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Georgia, serif;
+    font-size: 16px;
+    color: #333333;
+    background-color: #f5f5f5;
+}
+
+/* --- 960 Grid Container --- */
+.container {
+    width: 960px;
+    margin: 0 auto;
+}
+
+/* --- Header --- */
+header {
+    background-color: #1a1a2e;
+    color: #ffffff;
+    padding: 20px 0;
+}
+
+header .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header h1 {
+    font-size: 28px;
+    letter-spacing: 2px;
+    color: #e8a838;
+}
+
+header h1 span {
+    color: #ffffff;
+}
+
+/* --- Navigation Bar --- */
+nav {
+    background-color: #16213e;
+    padding: 0;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    width: 960px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+nav ul li {
+    float: left;
+}
+
+nav ul li a {
+    display: block;
+    color: #cccccc;
+    text-align: center;
+    padding: 14px 20px;
+    text-decoration: none;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+}
+
+nav ul li a:hover {
+    background-color: #e8a838;
+    color: #1a1a2e;
+}
+
+nav ul li a.active {
+    background-color: #e8a838;
+    color: #1a1a2e;
+    font-weight: bold;
+}
+
+/* --- Hero Section (Welcome page) --- */
+.hero {
+    background-color: #1a1a2e;
+    color: #ffffff;
+    padding: 60px 0;
+    text-align: center;
+}
+
+.hero h2 {
+    font-size: 36px;
+    color: #e8a838;
+    margin-bottom: 15px;
+}
+
+.hero p {
+    font-size: 18px;
+    color: #cccccc;
+    margin-bottom: 25px;
+}
+
+.hero a.btn {
+    display: inline-block;
+    background-color: #e8a838;
+    color: #1a1a2e;
+    padding: 12px 28px;
+    text-decoration: none;
+    font-weight: bold;
+    font-family: Arial, sans-serif;
+    margin: 5px;
+    border-radius: 3px;
+}
+
+.hero a.btn:hover {
+    background-color: #ffffff;
+    color: #1a1a2e;
+}
+
+/* --- Main Content Area --- */
+main {
+    padding: 30px 0;
+}
+
+/* --- Section Headings --- */
+h2.page-title {
+    font-size: 24px;
+    color: #1a1a2e;
+    border-bottom: 3px solid #e8a838;
+    padding-bottom: 10px;
+    margin-bottom: 25px;
+}
+
+/* --- Cards (for events) --- */
+.event-card {
+    background-color: #ffffff;
+    border: 1px solid #dddddd;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-left: 5px solid #e8a838;
+}
+
+.event-card h3 {
+    color: #1a1a2e;
+    font-size: 20px;
+    margin-bottom: 8px;
+}
+
+.event-card p {
+    color: #555555;
+    margin-bottom: 6px;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+.event-card .event-category {
+    display: inline-block;
+    background-color: #1a1a2e;
+    color: #e8a838;
+    padding: 3px 10px;
+    font-size: 12px;
+    font-family: Arial, sans-serif;
+    margin-bottom: 10px;
+}
+
+.event-card .event-dates {
+    color: #888888;
+    font-size: 13px;
+    font-style: italic;
+}
+
+/* --- Forms --- */
+.form-section {
+    background-color: #ffffff;
+    border: 1px solid #dddddd;
+    padding: 30px;
+    margin-bottom: 20px;
+}
+
+.form-section table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.form-section table tr td {
+    padding: 10px 8px;
+    vertical-align: top;
+}
+
+.form-section table tr td:first-child {
+    width: 200px;
+    font-weight: bold;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    color: #333333;
+    padding-top: 14px;
+}
+
+.form-section input[type="text"],
+.form-section input[type="date"],
+.form-section input[type="url"],
+.form-section textarea,
+.form-section select {
+    width: 100%;
+    padding: 8px 10px;
+    border: 1px solid #cccccc;
+    font-size: 14px;
+    font-family: Arial, sans-serif;
+    color: #333333;
+    background-color: #fafafa;
+}
+
+.form-section input[type="text"]:focus,
+.form-section textarea:focus,
+.form-section select:focus {
+    border-color: #e8a838;
+    outline: none;
+    background-color: #ffffff;
+}
+
+.form-section textarea {
+    height: 100px;
+    resize: vertical;
+}
+
+.form-section input[type="submit"] {
+    background-color: #1a1a2e;
+    color: #e8a838;
+    border: none;
+    padding: 12px 30px;
+    font-size: 15px;
+    font-family: Arial, sans-serif;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.form-section input[type="submit"]:hover {
+    background-color: #e8a838;
+    color: #1a1a2e;
+}
+
+/* --- Error and Success Messages --- */
+.error-msg {
+    color: #cc0000;
+    font-size: 13px;
+    font-family: Arial, sans-serif;
+    margin-top: 4px;
+    display: block;
+}
+
+.success-msg {
+    background-color: #d4edda;
+    border: 1px solid #c3e6cb;
+    color: #155724;
+    padding: 12px 16px;
+    margin-bottom: 20px;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+}
+
+.error-banner {
+    background-color: #f8d7da;
+    border: 1px solid #f5c6cb;
+    color: #721c24;
+    padding: 12px 16px;
+    margin-bottom: 20px;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+}
+
+/* --- About Page --- */
+.about-section {
+    background-color: #ffffff;
+    border: 1px solid #dddddd;
+    padding: 30px;
+    margin-bottom: 20px;
+}
+
+.about-section h3 {
+    color: #1a1a2e;
+    font-size: 20px;
+    margin-bottom: 12px;
+    border-left: 4px solid #e8a838;
+    padding-left: 10px;
+}
+
+.about-section p {
+    line-height: 1.8;
+    color: #444444;
+    margin-bottom: 12px;
+}
+
+/* --- Three column layout for features on welcome page --- */
+.col-3 {
+    float: left;
+    width: 300px;
+    margin-right: 30px;
+    background-color: #ffffff;
+    border: 1px solid #dddddd;
+    padding: 20px;
+    text-align: center;
+}
+
+.col-3:last-child {
+    margin-right: 0;
+}
+
+.col-3 h3 {
+    color: #1a1a2e;
+    font-size: 17px;
+    margin-bottom: 10px;
+}
+
+.col-3 p {
+    color: #666666;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+.col-3 .icon {
+    font-size: 32px;
+    margin-bottom: 12px;
+    color: #e8a838;
+}
+
+.clearfix::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* --- No events message --- */
+.no-events {
+    background-color: #ffffff;
+    border: 1px solid #dddddd;
+    padding: 30px;
+    text-align: center;
+    color: #888888;
+    font-family: Arial, sans-serif;
+    font-size: 15px;
+}
+
+/* --- Footer --- */
+footer {
+    background-color: #1a1a2e;
+    color: #aaaaaa;
+    padding: 20px 0;
+    text-align: center;
+    font-family: Arial, sans-serif;
+    font-size: 13px;
+    margin-top: 30px;
+}
+
+footer p {
+    margin-bottom: 4px;
+}
+
+footer a {
+    color: #e8a838;
+    text-decoration: none;
+}
