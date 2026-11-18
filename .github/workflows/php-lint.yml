@@ -1,0 +1,23 @@
+name: php-lint
+
+# Checks every PHP file for syntax errors and that the database script imports cleanly
+on:
+  push:
+  pull_request:
+
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+    services:
+      mysql:
+        image: mysql:8
+        env:
+          MYSQL_ROOT_PASSWORD: root
+        ports: ["3306:3306"]
+        options: --health-cmd="mysqladmin ping -proot" --health-interval=5s --health-retries=10
+    steps:
+      - uses: actions/checkout@v4
+      - name: PHP syntax check
+        run: for f in *.php; do php -l "$f" || exit 1; done
+      - name: Import database script
+        run: mysql -h 127.0.0.1 -uroot -proot < eventify_db.sql
