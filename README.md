@@ -1,5 +1,7 @@
 # Eventify
 
+[![php-lint](https://github.com/azmain2704-ship-it/Eventify/actions/workflows/php-lint.yml/badge.svg)](https://github.com/azmain2704-ship-it/Eventify/actions/workflows/php-lint.yml)
+
 An events website where you can add, view, edit and delete events. It's PHP and MySQL, built for my SEN4001 Web Design & Databases module at Cardiff Met.
 
 ![All events page](screenshots/2-view-events.png)
